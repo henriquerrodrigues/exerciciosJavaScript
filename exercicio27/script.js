@@ -2,31 +2,27 @@
 Nível Intermediário
 Você está desenvolvendo um sistema de agenda. Crie umprograma que permita ao usuário adicionar eventos(nome, data e hora) à agenda e depois exiba os eventosordenados por data e hora. */
 
-function agendar(nome, data, hora) {
-  this.nome = nome;
-  this.data = data;
-  this.hora = hora;
-}
-
-let agenda = {};
-let nome = 0;
-let data = 0;
-let hora = 0;
-let encerra = 0;
-function calendario(){
-    while(encerra != "s"){
-     nome = prompt("digite o nome do evento: ");
-     data = prompt("digite a data: dd/yy/aa ");
-     hora = prompt("digite a hora: hrs:min");
-     encerra = prompt("mais alguma agenda?");
-    if(nome !== 0 && data !== 0 && hora !== 0){
-        agenda = new agendar(nome, data, hora);
+class Agendar{
+  constructor(valor1, valor2, valor3){
+    this.nome = valor1;
+    this.data = valor2;
+    this.hora = valor3;
+  }
+  exibeEvento(calendario) {
+    for(let i = 0; i<calendario.length; i++){
+      console.log("evento: "+ calendario[i] + "\n");
     }
   }
-    return agenda;
 }
 
-console.log(calendario());
+let reserva = 0;
+let data = 0;
+let hora = 0;
+while(reserva !=""){
+  reserva = prompt("digite o nome evento para a agenda: ");
+  
+}
+
 
 
 

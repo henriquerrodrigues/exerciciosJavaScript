@@ -6,3 +6,5 @@ const nome = prompt("Digite seu nome: ");
 alert(
   `Olá, ${nome ? nome : "visitante"}! Bem-vindo(a) ao mundo da programação!`
 );
+
+document.querySelector("#resolucao").innerHTML = window.innerWidth;
