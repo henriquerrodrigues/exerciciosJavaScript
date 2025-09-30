@@ -1,0 +1,28 @@
+.container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  width: 40%;
+  float: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: red;
+}
