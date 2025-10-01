@@ -15,7 +15,7 @@ function exibeProdutos(){
   listaProdutos.innerHTML = "";
   produtos.forEach((produto) =>{
     const li = document.createElement("li");
-    li.innerHTML = `${produto.nome} - R$${produto.valor} <button onclick ="addCarrinho(${produto.id})">Adicionar</button>`;
+    li.innerHTML = `${produto.nome} - R$${produto.valor} <button onclick ="adicionaCarrinho(${produto.id})">Adicionar</button>`;
     listaProdutos.appendChild(li);  
   })
 }
@@ -28,7 +28,7 @@ function adicionaCarrinho(idProduto){
     if(existeNoCarrinho){
       existeNoCarrinho.quantidade++;
     }else{
-      carrinho.push({...produtoAdd, quantidade: 1});
+      carrinho.push({ ...produtoAdd, quantidade: 1});
     }
     exibeCarrinho();
   } 
@@ -37,9 +37,26 @@ function adicionaCarrinho(idProduto){
 function exibeCarrinho(){
   const listaCarrinho = document.getElementById("carrinho");
   const totalExibido = document.getElementById("total");
+  listaCarrinho.innerHTML = "";
+
+  let total = 0;
+  carrinho.forEach(item => {
+    const li = document.createElement("li");
+    const itemTotal = item.valor * item.quantidade;
+    total += itemTotal;
+    li.innerHTML = `${item.nome}(${item.quantidade}x) - R$ ${itemTotal.toFixed(2)} <button class="remove-btn" onclick="removeDoCarrinho(${item.id})">Remover</button>`;
+    listaCarrinho.appendChild(li);
+  });
+    totalExibido.innerHTML = `<h3>Total: R$ ${total.toFixed(2)}</h3>`;
 }
 
-
+function removeDoCarrinho(produtoId){
+  const itemIndex = carrinho.findIndex((item)=>item.id === produtoId);
+  if(itemIndex !== -1){
+    carrinho.splice(itemIndex,1);
+    exibeCarrinho();
+  }
+}
 
 exibeProdutos();
 
