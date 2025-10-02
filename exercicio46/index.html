@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha o seu candidato:</h1>
+        <ul id="opt-lista">
+            <li><button onclick="vote(0)">Opção 1</button></li>
+            <li><button onclick="vote(1)">Opção 2</button></li>
+            <li><button onclick="vote(2)">Opção 3</button></li>
+        </ul>
+        <div id="resultados" class="hidden">
+            <h2>Resultados da Votação:</h2>
+            <div id="opt-resultados"></div>
+            <p id="total-votos"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
