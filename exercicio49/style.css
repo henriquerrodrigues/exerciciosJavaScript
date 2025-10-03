@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+#event-form {
+  margin: 0 auto; /* Isso centraliza horizontalmente */
+  text-align: center; /* Isso centraliza o conteúdo dentro do elemento */
+  width: 70%; /* Defina a largura desejada para o formulário */
+  border-top: 1px solid #ccc;
+  padding: 20px 0px;
+}
+
+#event-list {
+  margin: 0 auto; /* Isso centraliza horizontalmente */
+  text-align: center; /* Isso centraliza o conteúdo dentro do elemento */
+  width: 70%; /* Defina a largura desejada para a lista */
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+#events {
+  list-style: none; /* Isso remove os bullets da lista */
+  padding: 0; /* Remova o espaçamento padrão */
+  margin: 0; /* Remova as margens padrão */
+}
